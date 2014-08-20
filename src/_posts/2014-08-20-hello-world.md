@@ -1,5 +1,7 @@
 ---
 layout: post
+title: Hello World
+description: test desc
 ---
 
 <section>
@@ -7,7 +9,6 @@ Hello World!
 ---
 This is a test post.
 </section>
-<!-- more -->
 
 
 <section>

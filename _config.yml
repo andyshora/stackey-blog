@@ -20,6 +20,11 @@ category_dir: /
 #baseurl: /path/to/blog 
 baseurl: 
 
+markdown: redcarpet
+pygments: true
+source: src
+destination: _site
+
 # The URL of your actual domain. This will be used to make absolute links in the RSS feed.
 url: http://blog.stackey.com
 
@@ -34,3 +39,4 @@ paginate: 3
 
 # Exclude metadata and development time dependencies (like Grunt plugins)
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+

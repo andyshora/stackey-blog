@@ -6,8 +6,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Stackey.com Blog</title>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="assets/main.css" rel="stylesheet" type="text/css">
+
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- Fonts -->
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Prata" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -24,7 +35,7 @@
       {% for post in site.posts %}
         <li>
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          {{ post.excerpt }}
+          <p>{{ post.description }}</p>
         </li>
       {% endfor %}
     </ul>
