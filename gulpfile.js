@@ -3,8 +3,8 @@ var gutil = require('gulp-util');
 var sass = require('gulp-sass');
 var exec = require('gulp-exec');
 
-var jekyllsrc = "./src/";
-var jekyllsite = "./site/";
+var jekyllsrc = "./";
+var jekyllsite = "./_site/";
 
 // Compile Sass to CSS
 gulp.task('sass', function () {

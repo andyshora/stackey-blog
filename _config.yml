@@ -22,7 +22,6 @@ category_dir: /
 
 markdown: redcarpet
 pygments: true
-source: src
 
 # The URL of your actual domain. This will be used to make absolute links in the RSS feed.
 url: http://blog.stackey.com
