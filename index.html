@@ -1,49 +1,16 @@
 ---
+layout: default
 ---
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Stackey.com Blog</title>
   
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- syntax highlighting CSS -->
-  <link rel="stylesheet" href="/css/syntax.css">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/main.css">
-
-  <!-- Fonts -->
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Prata" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <header>
-    <h1>Stackey.com Blog</h1>
-    <p>News, competitions and articles for <a href="http://www.stackey.com">Stackey.com</a></p>
-    <p>This stuff is tweeted <a href="https://twitter.com/webperfnews">@StackeyApp</a></p>
-    
-
-  </header>
-  <section>
-    <h1>Latest Posts</h1>
-    <ul>
-      {% for post in site.posts %}
-        <li>
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p>{{ post.description }}</p>
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
+<section>
+  <h1>Latest Posts</h1>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
   
-  <footer>
-    
-  </footer>
-
-</body>
-</html>
+</section>

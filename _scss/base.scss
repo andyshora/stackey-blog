@@ -6,7 +6,7 @@ body {
   font-family: 'Source Sans Pro';
   font-weight: 100;
   min-width: 320px;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 header {
@@ -15,6 +15,17 @@ header {
   max-width: 1280px;
   padding: 0 7%;
   margin: 0;
+}
+nav {
+  width: 86%;
+  max-width: 1280px;
+  padding: 10px 7%;
+  margin: 0;
+  text-align: left;
+  background: $s0;
+}
+main {
+  padding: 20px 0;
 }
 p {
   font-family: 'Source Sans Pro';
@@ -41,4 +52,74 @@ section.full {
   margin: 0;
   background: black;
   color: white; 
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+  margin: 10px 0 5px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+  margin: 8px 0 4px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 40px;
+  margin: 5px 0 2px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* Won't be used here */
+
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+strong {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+  border: none;
+  background: black;
+  margin: 12px 0 16px;
+
+  &.st-hr-dark {
+    background: white;
+    width: 70%;
+    margin: 18px 15% 18px;
+  }
+  &.st-hr-light {
+    background: $s5;
+    width: 70%;
+    margin: 18px 15% 18px;
+  }
+  &.clear {
+    background: transparent;
+  }
+  &.st-hr--thick {
+    margin: 32px 0 36px;
+  }
+}
+
+a {
+  cursor: pointer;
+  color: $s3;
 }
