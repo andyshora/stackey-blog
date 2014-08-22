@@ -10,29 +10,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- syntax highlighting CSS -->
-  <link rel="stylesheet" href="css/syntax.css">
+  <link rel="stylesheet" href="/css/syntax.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="/css/base.css">
 
   <!-- Fonts -->
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Prata" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <header>
-    <h1>Stackey.com Blog</h1>
-    <p>News, competitions and articles for <a href="http://www.stackey.com">Stackey.com</a></p>
-    <p>This stuff is tweeted <a href="https://twitter.com/webperfnews">@StackeyApp</a></p>
-    
-
-  </header>
-  <nav>
-    <a href="competitions.html">competitions</a>
-    <a href="articles.html">articles</a>
-    <a href="about.html">about</a>
-  </nav>
-  <main>{{ content }}</main>
-  <footer>&copy; Stackey 2014</footer>
+  <aside class="st-aside">
+    <header class="st-header">
+      <p>News, competitions and articles for <a href="http://www.stackey.com">Stackey.com</a></p>
+      <p>This stuff is tweeted <a href="https://twitter.com/webperfnews">@StackeyApp</a></p>
+    </header>
+    <nav class="st-nav">
+      <a href="/competitions">competitions</a>
+      <a href="/articles">articles</a>
+      <a href="/about">about</a>
+    </nav>
+    <footer class="st-footer">&copy; Stackey 2014</footer>
+  </aside><main class="st-main">{{ content }}</main>
+  
 
 </body>
 </html>

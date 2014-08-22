@@ -1,3 +1,4 @@
+@import "mixins";
 @import "options";
 
 body {
@@ -9,24 +10,64 @@ body {
   text-align: left;
   width: 100%;
 }
-header {
-  text-align: left;
-  width: 86%;
-  max-width: 1280px;
-  padding: 0 7%;
-  margin: 0;
+.st-aside {
+  width: 100%;
+  display: block;
+  background: $color-bg-light;
+  color: black;
+  vertical-align: top;
+
+  @include from-width(768) {
+    display: inline-block;
+    width: 25%;
+    min-height: 500px;
+    position: relative;
+  }
 }
-nav {
-  width: 86%;
-  max-width: 1280px;
-  padding: 10px 7%;
-  margin: 0;
-  text-align: left;
-  background: $s0;
-}
-main {
+  .st-header {
+    text-align: left;
+    width: 86%;
+    max-width: 1280px;
+    padding: 0 7%;
+    margin: 0;
+    background: rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+  .st-nav {
+    width: 86%;
+    max-width: 1280px;
+    padding: 10px 7%;
+    margin: 0;
+    text-align: left;
+    background: $color-bg-light;
+  }
+  .st-footer {
+    width: 86%;
+    max-width: 1280px;
+    padding: 10px 7%;
+    margin: 0;
+    text-align: center;
+    font-size: 10px;
+
+    @include from-width(768) {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+.st-main {
+  display: inline-block;
+  width: 75%;
   padding: 20px 0;
+  min-height: 800px;
+  vertical-align: top;
 }
+  .st-article {}
+  .st-author {
+    width: 86%;
+    max-width: 1280px;
+    padding: 10px 7%;
+  }
+
 p {
   font-family: 'Source Sans Pro';
   margin: 10px 0 19px;

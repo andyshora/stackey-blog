@@ -8,23 +8,60 @@ body {
   text-align: left;
   width: 100%; }
 
-header {
+.st-aside {
+  width: 100%;
+  display: block;
+  background: #f7f7f7;
+  color: black;
+  vertical-align: top; }
+  @media only screen and (min-width: 768px) {
+    .st-aside {
+      display: inline-block;
+      width: 25%;
+      min-height: 500px;
+      position: relative; } }
+
+.st-header {
   text-align: left;
   width: 86%;
   max-width: 1280px;
   padding: 0 7%;
-  margin: 0; }
+  margin: 0;
+  background: rgba(0, 0, 0, 0.05);
+  overflow: hidden; }
 
-nav {
+.st-nav {
   width: 86%;
   max-width: 1280px;
   padding: 10px 7%;
   margin: 0;
   text-align: left;
-  background: #afafaf; }
+  background: #f7f7f7; }
 
-main {
-  padding: 20px 0; }
+.st-footer {
+  width: 86%;
+  max-width: 1280px;
+  padding: 10px 7%;
+  margin: 0;
+  text-align: center;
+  font-size: 10px; }
+  @media only screen and (min-width: 768px) {
+    .st-footer {
+      position: absolute;
+      bottom: 0; } }
+
+.st-main {
+  display: inline-block;
+  width: 75%;
+  padding: 20px 0;
+  min-height: 800px;
+  vertical-align: top; }
+
+
+.st-author {
+  width: 86%;
+  max-width: 1280px;
+  padding: 10px 7%; }
 
 p {
   font-family: 'Source Sans Pro';

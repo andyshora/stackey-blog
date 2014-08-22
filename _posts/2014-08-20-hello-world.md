@@ -2,6 +2,8 @@
 layout: post
 title: Hello World
 description: test desc
+author_name: Andy Shora
+author_handle: andyshora
 ---
 
 <section>

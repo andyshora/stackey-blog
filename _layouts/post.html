@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
-<article>
+<article class="st-article">
 	{{ content }}
 </article>
+<address class="st-author">
+	<h3>{{ page.author_name }}</h3>
+	<p><a href="https://twitter.com/{{ page.author_handle }}" title="{{ page.author_name }} on Twitter">{{ page.author_handle }}</a></p>
+</address>
