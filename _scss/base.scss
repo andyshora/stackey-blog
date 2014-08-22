@@ -1,5 +1,6 @@
 @import "mixins";
 @import "options";
+@import "animations";
 
 body {
 	margin: 0;
@@ -19,9 +20,16 @@ body {
 
   @include from-width(768) {
     display: inline-block;
-    width: 25%;
+    position: fixed;
+    height: 100%;
+    width: 30%;
     min-height: 500px;
-    position: relative;
+  }
+  @include from-width(1024) {
+    width: 25%;
+  }
+  @include from-width(1200) {
+    width: 20%;
   }
 }
   .st-header {
@@ -30,16 +38,50 @@ body {
     max-width: 1280px;
     padding: 0 7%;
     margin: 0;
-    background: rgba(0,0,0,0.05);
     overflow: hidden;
+    text-align: center;
+    font-family: 'Prata';
+    font-size: 15px;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .st-logo {
+      margin: 50px auto 20px;
+    }
   }
   .st-nav {
     width: 86%;
     max-width: 1280px;
-    padding: 10px 7%;
+    padding: 20px 7%;
     margin: 0;
-    text-align: left;
+    text-align: center;
     background: $color-bg-light;
+
+    @include from-width(768) {
+      text-align: left;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      display: inline-block;
+      text-align: center;
+      margin: 2px auto;
+
+      @include from-width(768) {
+        display: block;
+      }
+
+      span {
+        display: inline-block;
+        padding: 10px;
+        background: white;
+      }
+    }
   }
   .st-footer {
     width: 86%;
@@ -55,13 +97,29 @@ body {
     }
   }
 .st-main {
-  display: inline-block;
-  width: 75%;
+  width: 100%;
+  display: block;
   padding: 20px 0;
   min-height: 800px;
   vertical-align: top;
+
+  @include from-width(768) {
+    width: 70%;
+    display: inline-block;
+    margin-left: 30%;
+  }
+  @include from-width(1024) {
+    width: 75%;
+    margin-left: 25%;
+  }
+  @include from-width(1200) {
+    width: 80%;
+    margin-left: 20%;
+  }
 }
-  .st-article {}
+  .st-article {
+
+  }
   .st-author {
     width: 86%;
     max-width: 1280px;
@@ -69,14 +127,20 @@ body {
   }
 
 p {
-  font-family: 'Source Sans Pro';
   margin: 10px 0 19px;
   line-height: 23px;
   font-size: 15px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, blockquote {
   font-family: 'Prata';
+}
+blockquote {
+  font-style: italic;
+
+  &.st-blockquote--big {
+    font-size: 24px;
+  }
 }
 article {
   text-align: left;
@@ -86,13 +150,17 @@ section {
   max-width: 1280px;
   margin: 0 7%;
   text-align: left;
+
+  .st-article & {
+    padding: 20px 0 20px 0;
+  }
 }
 section.full {
   width: 86%;
-  padding: 20px 7%;
-  margin: 0;
-  background: black;
-  color: white; 
+  padding: 40px 7% 30px;
+  margin: 40px 0;
+  background: $color-bg-light;
+  color: black; 
 }
 
 h1 {
@@ -163,4 +231,90 @@ hr {
 a {
   cursor: pointer;
   color: $s3;
+}
+.st-tweet-bar {
+  background: #4099FF;
+  color: white;
+  padding: 15px 7% 5px;
+  width: 86%;
+  text-align: center;
+
+  @include from-width(768) {
+    position: absolute;
+    bottom: 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.st-logo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+
+  > div {
+    height: 12px;
+    position: relative;
+    right: 0;
+
+    &:nth-child(1) {
+      background: $s1;
+    }
+    &:nth-child(2) {
+      background: $s2;
+    }
+    &:nth-child(3) {
+      background: $s3;
+    }
+    &:nth-child(4) {
+      background: $s4;
+    }
+    &:nth-child(5) {
+      background: $s5;
+    }
+  }
+
+  &.st-logo--animated {
+    > div {
+
+      position: relative;
+      @include prefix(transform-origin, 50% 50%);
+      @include prefix(transform, translate(0, -100px));
+
+      opacity: 0;
+      @include prefix(animation, animateFall 1s ease-out 1 forwards);
+
+      &:nth-child(1) {
+        @include prefix(animation-delay, 1.5s);
+      }
+      &:nth-child(2) {
+        @include prefix(animation, animateFallRight 1s ease-out 1 forwards);
+        @include prefix(animation-delay, 1.15s);
+      }
+      &:nth-child(3) {
+        @include prefix(animation, animateFallLeft 1s ease-out 1 forwards);
+        @include prefix(animation-delay, .85s);
+      }
+      &:nth-child(4) {
+        @include prefix(animation, animateFallRight 1s ease-out 1 forwards);
+        @include prefix(animation-delay, .65s);
+      }
+      &:nth-child(5) {
+        @include prefix(animation, animateFallLeft 1s ease-out 1 forwards);
+        @include prefix(animation-delay, .5s);
+      }
+    }
+  }
+
+  &.st-logo--tiny {
+    width: 30px;
+    height: 30px;
+
+    > div {
+      height: 6px;
+    }
+  }
 }
