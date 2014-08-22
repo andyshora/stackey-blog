@@ -31,10 +31,15 @@ gulp.task('jekyll', function () {
 
 gulp.task('default', function(){
 	gulp.run('sass');
-  gulp.watch(jekyllsrc + "/_scss/**", function() {
-    gulp.run('sass');
-    gulp.run('jekyll');
-  });
+  	gulp.watch(jekyllsrc + "/_scss/**", 
+  		function() {
+		    gulp.run('sass');
+		    gulp.run('jekyll');
+		  });
+  	gulp.watch([jekyllsrc + "/_posts/**", jekyllsrc + "/_layouts/**"], 
+  		function() {
+  			gulp.run('jekyll');
+  		});
 });
 
 
